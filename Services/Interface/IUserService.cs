@@ -11,8 +11,6 @@ namespace Services.Interface
     {
         Task<string> RegisterAsync(RegisterModel model);
         Task<AuthenticationModel> GetTokenAsync(TokenRequestModel model);
-
-
     }
 
 }

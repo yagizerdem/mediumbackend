@@ -15,3 +15,7 @@ C:\Users\yagiz\Desktop\MediumBackend\Services\obj\Debug\net8.0\Services.pdb
 C:\Users\yagiz\Desktop\MediumBackend\Services\obj\Debug\net8.0\ref\Services.dll
 C:\Users\yagiz\Desktop\MediumBackend\Services\bin\Debug\net8.0\Utility.dll
 C:\Users\yagiz\Desktop\MediumBackend\Services\bin\Debug\net8.0\Utility.pdb
+C:\Users\yagiz\Desktop\MediumBackend\Services\bin\Debug\net8.0\DataAccess.dll
+C:\Users\yagiz\Desktop\MediumBackend\Services\bin\Debug\net8.0\Repository.dll
+C:\Users\yagiz\Desktop\MediumBackend\Services\bin\Debug\net8.0\Repository.pdb
+C:\Users\yagiz\Desktop\MediumBackend\Services\bin\Debug\net8.0\DataAccess.pdb

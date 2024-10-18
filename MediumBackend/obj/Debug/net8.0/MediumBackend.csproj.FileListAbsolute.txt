@@ -60,7 +60,6 @@ C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\MediumBacken
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\MediumBackend.AssemblyInfoInputs.cache
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\MediumBackend.AssemblyInfo.cs
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\MediumBackend.csproj.CoreCompileInputs.cache
-C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\MediumBackend.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\MediumBackend.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\obj\Debug\net8.0\staticwebassets.development.json
@@ -155,3 +154,6 @@ C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\bin\Debug\net8.0\Services.dll
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\bin\Debug\net8.0\Utility.dll
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\bin\Debug\net8.0\Services.pdb
 C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\bin\Debug\net8.0\Utility.pdb
+C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\bin\Debug\net8.0\Repository.dll
+C:\Users\yagiz\Desktop\MediumBackend\MediumBackend\bin\Debug\net8.0\Repository.pdb
