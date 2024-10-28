@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/brb3Y8K5iY=",
+  "dgSpecHash": "s63r7MrF6A3Xfy9os9yV5dWuTHWmHoIickdfAH0LXKlYdi7pqDTh6pl9HR4fNy5Pai+D2qV61oZvZlefy5hKIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yagiz\\Desktop\\MediumBackend\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\yagiz\\Desktop\\mediumbackende\\mediumbackend\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yagiz\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\yagiz\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
