@@ -23,9 +23,10 @@ namespace MediumBackend.Controllers
 
 
         [HttpGet("article")]
-        public async Task<IActionResult> GetArticle()
+        public async Task<IActionResult> GetArticle([FromQuery(Name = "page")] string page)
         {
-            IEnumerable<ArticleDTO> articles = await this.articleService.GetArticles(0,0);
+            int limit = 10; // default limit 
+            IEnumerable<ArticleDTO> articles = await this.articleService.GetArticles(Convert.ToInt32(page),limit);
             return Ok(new ApiResponse<IEnumerable<ArticleDTO>>() { Succeeded = true, Data = articles });
         }
 
@@ -35,6 +36,15 @@ namespace MediumBackend.Controllers
             var userId = User.FindFirst("uid")?.Value;
             await articleService.PostArticle(articleDto , userId);
             return Ok(new ApiResponse<string>() { Succeeded = true , Data="article added successfully ..."});
+        }
+
+
+        [HttpPost("deleteArticle")]
+        public async Task<IActionResult> DeleteArticle([FromQuery(Name = "Id")] string Id)
+        {
+            var userId = User.FindFirst("uid")?.Value;
+            await this.articleService.DeleteArticle(Convert.ToInt32(Id) , userId);
+            return Ok(new ApiResponse<string>() { Succeeded = true, Data = "article deleted successfully ..." });
         }
 
     }

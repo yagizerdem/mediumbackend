@@ -12,6 +12,7 @@ namespace Repository.Interface
 {
     public interface IArticleRepository : IRepository<Article>
     {
-   
+
+        public Task<IEnumerable<Article>> getArticleWithPagination(int limit, int page);
     }
 }

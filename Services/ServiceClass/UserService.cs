@@ -34,6 +34,10 @@ namespace Services.ServiceClass
         {
             try
             {
+                if (model?.Email == null)
+                {
+                    throw new Exception("email field is required");
+                }
                 AuthenticationModel authenticationModel;
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 if (user == null)

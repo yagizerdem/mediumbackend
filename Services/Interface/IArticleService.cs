@@ -10,6 +10,8 @@ namespace Services.Interface
     public interface IArticleService
     {
         Task PostArticle(ArticleDTO articleDTO , string authorId);
-        Task<IEnumerable<ArticleDTO>> GetArticles(int page, int limit);    
+        Task<IEnumerable<ArticleDTO>> GetArticles(int page, int limit);
+
+        Task DeleteArticle(int articleId , string authorId); 
     }
 }

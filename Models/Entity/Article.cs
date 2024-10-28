@@ -14,6 +14,7 @@ namespace Models.Entity
         public string Body { get; set; }
         public string AuthorId{ get; set; }
         public AppUser Author { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
 
     }
 }

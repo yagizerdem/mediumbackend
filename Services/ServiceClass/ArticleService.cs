@@ -19,11 +19,22 @@ namespace Services.ServiceClass
             this._autoMapper = autoMapper;
         }
 
+        public async Task DeleteArticle(int articleId, string authorId)
+        {
+            Article article = await this._unitOfWork.Articles.GetByIdAsync(articleId);
+            if(article.AuthorId != authorId)
+            {
+                throw new Exception("article is not owned by author");
+            }
+            this._unitOfWork.Articles.Delete(article);
+            await this._unitOfWork.SaveAsync();
+        }
+
         public async Task<IEnumerable<ArticleDTO>> GetArticles(int page , int limit)
         {
             try
             {
-                IEnumerable<Article> articles = await this._unitOfWork.Articles.GetAllAsync();
+                IEnumerable<Article> articles = await this._unitOfWork.Articles.getArticleWithPagination(limit , page);
                 List<ArticleDTO> result = new List<ArticleDTO>();
                 foreach (var article in articles)
                 {
