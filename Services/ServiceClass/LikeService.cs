@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Models.DTO;
+using Models.Entity;
 using Repository.UnitOfWork;
 using Services.Interface;
 using System;
@@ -19,18 +20,23 @@ namespace Services.ServiceClass
             _unitOfWork = unitOfWork;
             this._autoMapper = autoMapper;
         }
-        public Task DeleteLike(int articleId, string authorId)
+        public Task DeleteLike(int likeId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<ArticleDTO>> GetLikes(int page, int limit)
+        public Task<IEnumerable<ArticleDTO>> GetLikes()
         {
             throw new NotImplementedException();
         }
 
-        public Task PostLike(ArticleDTO articleDTO, string authorId)
+        public Task PostLike(LikeDTO likeDto)
         {
+            Like like =  this._autoMapper.Map<Like>(likeDto);
+            Like? isExist = this._unitOfWork.Likes.getByUserIdAndArticleId(likeDto);
+            
+
+
             throw new NotImplementedException();
         }
     }

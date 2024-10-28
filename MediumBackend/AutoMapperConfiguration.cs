@@ -12,6 +12,8 @@ namespace MediumBackend
             {
                 cfg.CreateMap<ArticleDTO, Article>(MemberList.Destination);
                 cfg.CreateMap<Article, ArticleDTO>(MemberList.Destination);
+                cfg.CreateMap<LikeDTO, Like>(MemberList.Destination);
+                cfg.CreateMap<Like, LikeDTO>(MemberList.Destination);
             });
 
 //#if DEBUG

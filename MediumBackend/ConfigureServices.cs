@@ -38,6 +38,7 @@ namespace MediumBackend
             // custom services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IArticleService, ArticleService>();
+            services.AddScoped<ILikeService, LikeService>();
 
             services.AddControllers()
         .AddJsonOptions(opts => opts.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase);
@@ -79,6 +80,7 @@ namespace MediumBackend
 
             // repository
             services.AddScoped<IArticleRepository, ArticleRepository>();
+            services.AddScoped<ILikeRepostiory, LikeRepository>();
 
             // unit of work 
             services.AddScoped<IUnitOfWork, UnitOfWork>();

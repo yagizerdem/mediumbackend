@@ -10,6 +10,7 @@ namespace Repository.UnitOfWork
     public interface  IUnitOfWork : IDisposable
     {
         IArticleRepository Articles { get; }
+        ILikeRepostiory Likes { get; }
         Task SaveAsync();
     }
 }

@@ -9,8 +9,8 @@ namespace Services.Interface
 {
     public interface ILikeService
     {
-        Task PostLike(ArticleDTO articleDTO, string authorId);
-        Task<IEnumerable<ArticleDTO>> GetLikes(int page, int limit);
-        Task DeleteLike(int articleId, string authorId);
+        Task PostLike(LikeDTO likeDto);
+        Task<IEnumerable<ArticleDTO>> GetLikes();
+        Task DeleteLike(int likeId);
     }
 }
