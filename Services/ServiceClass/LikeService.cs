@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utility.CustomExceptions;
 
 namespace Services.ServiceClass
 {
@@ -20,24 +21,34 @@ namespace Services.ServiceClass
             _unitOfWork = unitOfWork;
             this._autoMapper = autoMapper;
         }
-        public Task DeleteLike(int likeId)
-        {
-            throw new NotImplementedException();
-        }
 
         public Task<IEnumerable<ArticleDTO>> GetLikes()
         {
             throw new NotImplementedException();
         }
 
-        public Task PostLike(LikeDTO likeDto)
+        public async Task PostLike(LikeDTO likeDto)
         {
             Like like =  this._autoMapper.Map<Like>(likeDto);
             Like? isExist = this._unitOfWork.Likes.getByUserIdAndArticleId(likeDto);
-            
+            if(isExist != null)
+            {
+                throw new LikeExceptions("user alredy liked this post");
+            }
+            await this._unitOfWork.Likes.AddAsync(like);
+            await this._unitOfWork.SaveAsync();
 
-
-            throw new NotImplementedException();
+        }
+    
+        public async Task RemoveLike(LikeDTO likeDto)
+        {
+            Like? like = this._unitOfWork.Likes.getByUserIdAndArticleId(likeDto);
+            if (like == null)
+            {
+                throw new LikeExceptions("like does not exist");
+            }
+            this._unitOfWork.Likes.Delete(like);
+            await this._unitOfWork.SaveAsync();
         }
     }
 }

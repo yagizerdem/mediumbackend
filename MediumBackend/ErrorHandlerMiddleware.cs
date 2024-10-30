@@ -37,6 +37,10 @@ namespace MediumBackend
                         // not found error
                         response.StatusCode = (int)HttpStatusCode.NotFound;
                         break;
+                    case LikeExceptions e:
+                        // not found error
+                        response.StatusCode = (int)HttpStatusCode.Conflict;
+                        break;
                     default:
                         // unhandled error
                         response.StatusCode = (int)HttpStatusCode.InternalServerError;

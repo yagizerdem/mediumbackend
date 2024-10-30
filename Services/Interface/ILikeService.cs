@@ -11,6 +11,6 @@ namespace Services.Interface
     {
         Task PostLike(LikeDTO likeDto);
         Task<IEnumerable<ArticleDTO>> GetLikes();
-        Task DeleteLike(int likeId);
+        public Task RemoveLike(LikeDTO likeDto);
     }
 }
